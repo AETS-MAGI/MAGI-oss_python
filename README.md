@@ -4,6 +4,8 @@
 
 *MAGI — Managed Artifact Generation and Integrity*
 
+MAGI Pages : https://aets-magi.github.io/magi-pages/
+
 MAGIは、LLM（大規模言語モデル）評価における**実行条件の記録・比較可能化・再実行可能化**を目的とした研究基盤です。評価結果だけでなく、評価を構成するすべての証拠（実験仕様・環境情報・出力・採点）を統一形式で保存し、再現可能な比較を可能にします。**Model Context Protocol（MCP）サーバーとして動作し**、Claude Desktop などのLLMクライアントから実験の投入・管理・結果取得を行えます。
 
 > **このリポジトリの範囲**  
