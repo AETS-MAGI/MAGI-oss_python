@@ -267,6 +267,12 @@ pip install -e compute-runner
 
 ---
 
+## License
+
+This software is released under the **MIT License**.
+
+---
+
 ## 関連資料
 
 - **スライド**: [IEICE総合大会 2026年3月発表](./docs/2026-0312_IEICE.pdf)
