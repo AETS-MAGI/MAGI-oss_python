@@ -1,0 +1,2229 @@
+{
+  "schema_version": "batch_plan_v1",
+  "plan_id": "jp_en100_zorya_t0p2_e30_20260306",
+  "model_id": "deepseek-r1-distill-qwen-7b-q4_k_m-t0p2:latest",
+  "dataset": "pairs_ja_en_100.json",
+  "epochs": 30,
+  "replicates": 1,
+  "node_pool": [
+    "zorya"
+  ],
+  "node_schedule": {
+    "strategy": "round_robin"
+  },
+  "gen_params_mode": "single",
+  "gen_params_single": {
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 40,
+    "seed": 42,
+    "max_new_tokens": 256,
+    "deterministic_intent": false
+  },
+  "backend_request": {
+    "engine": "ollama",
+    "accel": "rocm"
+  },
+  "tasks": [
+    {
+      "item_id": "P001:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ノルマン・コンクエストが起きた年は? A:1066 B:1215 C:1492 D:1648",
+      "meta": {
+        "pair_id": "P001",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P001:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ノルマン・コンクエストが起きた年は? A:1066 B:1215 C:1492 D:1648",
+      "meta": {
+        "pair_id": "P001",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P002:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: コロンブスが大西洋を横断した年は? A:1453 B:1492 C:1517 D:1588",
+      "meta": {
+        "pair_id": "P002",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P002:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: コロンブスが大西洋を横断した年は? A:1453 B:1492 C:1517 D:1588",
+      "meta": {
+        "pair_id": "P002",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P003:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ルターが『95か条の論題』を提示した年は? A:1492 B:1517 C:1555 D:1618",
+      "meta": {
+        "pair_id": "P003",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P003:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ルターが『95か条の論題』を提示した年は? A:1492 B:1517 C:1555 D:1618",
+      "meta": {
+        "pair_id": "P003",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P004:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: アメリカ独立宣言が採択された年は? A:1776 B:1789 C:1815 D:1861",
+      "meta": {
+        "pair_id": "P004",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P004:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: アメリカ独立宣言が採択された年は? A:1776 B:1789 C:1815 D:1861",
+      "meta": {
+        "pair_id": "P004",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P005:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: フランス革命が始まった年は? A:1776 B:1789 C:1815 D:1848",
+      "meta": {
+        "pair_id": "P005",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P005:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: フランス革命が始まった年は? A:1776 B:1789 C:1815 D:1848",
+      "meta": {
+        "pair_id": "P005",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P006:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ワーテルローの戦いの年は? A:1789 B:1804 C:1815 D:1848",
+      "meta": {
+        "pair_id": "P006",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P006:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ワーテルローの戦いの年は? A:1789 B:1804 C:1815 D:1848",
+      "meta": {
+        "pair_id": "P006",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P007:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: アメリカ南北戦争が始まった年は? A:1848 B:1861 C:1871 D:1898",
+      "meta": {
+        "pair_id": "P007",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P007:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: アメリカ南北戦争が始まった年は? A:1848 B:1861 C:1871 D:1898",
+      "meta": {
+        "pair_id": "P007",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P008:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 第一次世界大戦が始まった年は? A:1905 B:1914 C:1917 D:1939",
+      "meta": {
+        "pair_id": "P008",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P008:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 第一次世界大戦が始まった年は? A:1905 B:1914 C:1917 D:1939",
+      "meta": {
+        "pair_id": "P008",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P009:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ロシア革命（十月革命）の年は? A:1905 B:1914 C:1917 D:1922",
+      "meta": {
+        "pair_id": "P009",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P009:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ロシア革命（十月革命）の年は? A:1905 B:1914 C:1917 D:1922",
+      "meta": {
+        "pair_id": "P009",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P010:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 第一次世界大戦が終結した年は? A:1917 B:1918 C:1919 D:1923",
+      "meta": {
+        "pair_id": "P010",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P010:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 第一次世界大戦が終結した年は? A:1917 B:1918 C:1919 D:1923",
+      "meta": {
+        "pair_id": "P010",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P011:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 世界恐慌（ウォール街大暴落）の年は? A:1923 B:1929 C:1933 D:1939",
+      "meta": {
+        "pair_id": "P011",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P011:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 世界恐慌（ウォール街大暴落）の年は? A:1923 B:1929 C:1933 D:1939",
+      "meta": {
+        "pair_id": "P011",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P012:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 第二次世界大戦が欧州で始まった年は? A:1931 B:1937 C:1939 D:1941",
+      "meta": {
+        "pair_id": "P012",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P012:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 第二次世界大戦が欧州で始まった年は? A:1931 B:1937 C:1939 D:1941",
+      "meta": {
+        "pair_id": "P012",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P013:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 第二次世界大戦が終結した年は? A:1943 B:1944 C:1945 D:1946",
+      "meta": {
+        "pair_id": "P013",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P013:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 第二次世界大戦が終結した年は? A:1943 B:1944 C:1945 D:1946",
+      "meta": {
+        "pair_id": "P013",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P014:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: インドが独立した年は? A:1945 B:1947 C:1950 D:1956",
+      "meta": {
+        "pair_id": "P014",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P014:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: インドが独立した年は? A:1945 B:1947 C:1950 D:1956",
+      "meta": {
+        "pair_id": "P014",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P015:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ベルリンの壁が建設された年は? A:1956 B:1961 C:1968 D:1989",
+      "meta": {
+        "pair_id": "P015",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P015:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ベルリンの壁が建設された年は? A:1956 B:1961 C:1968 D:1989",
+      "meta": {
+        "pair_id": "P015",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P016:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 人類初の月面着陸（アポロ11号）の年は? A:1961 B:1965 C:1969 D:1972",
+      "meta": {
+        "pair_id": "P016",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P016:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 人類初の月面着陸（アポロ11号）の年は? A:1961 B:1965 C:1969 D:1972",
+      "meta": {
+        "pair_id": "P016",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P017:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ベルリンの壁崩壊の年は? A:1985 B:1987 C:1989 D:1991",
+      "meta": {
+        "pair_id": "P017",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P017:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ベルリンの壁崩壊の年は? A:1985 B:1987 C:1989 D:1991",
+      "meta": {
+        "pair_id": "P017",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P018:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ソ連崩壊の年は? A:1989 B:1991 C:1993 D:1995",
+      "meta": {
+        "pair_id": "P018",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P018:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ソ連崩壊の年は? A:1989 B:1991 C:1993 D:1995",
+      "meta": {
+        "pair_id": "P018",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P019:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 9.11同時多発テロの年は? A:1999 B:2001 C:2003 D:2008",
+      "meta": {
+        "pair_id": "P019",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P019:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 9.11同時多発テロの年は? A:1999 B:2001 C:2003 D:2008",
+      "meta": {
+        "pair_id": "P019",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P020:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: リーマン・ショックの年は? A:2001 B:2004 C:2008 D:2011",
+      "meta": {
+        "pair_id": "P020",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P020:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: リーマン・ショックの年は? A:2001 B:2004 C:2008 D:2011",
+      "meta": {
+        "pair_id": "P020",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P021:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ルネサンスが最初に大きく花開いた都市圏は? A:ロンドン B:フィレンツェ C:ベルリン D:モスクワ",
+      "meta": {
+        "pair_id": "P021",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P021:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ルネサンスが最初に大きく花開いた都市圏は? A:ロンドン B:フィレンツェ C:ベルリン D:モスクワ",
+      "meta": {
+        "pair_id": "P021",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P022:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 産業革命が最初に進展した国は? A:フランス B:ドイツ C:イギリス D:アメリカ",
+      "meta": {
+        "pair_id": "P022",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P022:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 産業革命が最初に進展した国は? A:フランス B:ドイツ C:イギリス D:アメリカ",
+      "meta": {
+        "pair_id": "P022",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P023:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 国際連合（UN）本部がある都市は? A:ジュネーブ B:ニューヨーク C:パリ D:ブリュッセル",
+      "meta": {
+        "pair_id": "P023",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P023:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 国際連合（UN）本部がある都市は? A:ジュネーブ B:ニューヨーク C:パリ D:ブリュッセル",
+      "meta": {
+        "pair_id": "P023",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P024:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 古代エジプト文明が主に栄えた河川は? A:チグリス川 B:ユーフラテス川 C:ナイル川 D:インダス川",
+      "meta": {
+        "pair_id": "P024",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P024:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 古代エジプト文明が主に栄えた河川は? A:チグリス川 B:ユーフラテス川 C:ナイル川 D:インダス川",
+      "meta": {
+        "pair_id": "P024",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P025:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ローマ帝国の公用語として広く使われた言語は? A:ギリシャ語 B:ラテン語 C:ヘブライ語 D:アラム語",
+      "meta": {
+        "pair_id": "P025",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P025:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ローマ帝国の公用語として広く使われた言語は? A:ギリシャ語 B:ラテン語 C:ヘブライ語 D:アラム語",
+      "meta": {
+        "pair_id": "P025",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P026:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: マグナ・カルタが制定された国は? A:イングランド B:フランス C:スペイン D:神聖ローマ帝国",
+      "meta": {
+        "pair_id": "P026",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P026:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: マグナ・カルタが制定された国は? A:イングランド B:フランス C:スペイン D:神聖ローマ帝国",
+      "meta": {
+        "pair_id": "P026",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P027:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 十字軍遠征の主要な目的地は? A:ローマ B:エルサレム C:コンスタンティノープル D:アレクサンドリア",
+      "meta": {
+        "pair_id": "P027",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P027:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 十字軍遠征の主要な目的地は? A:ローマ B:エルサレム C:コンスタンティノープル D:アレクサンドリア",
+      "meta": {
+        "pair_id": "P027",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P028:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 宗教改革でカトリック改革（対抗宗教改革）を主導した修道会は? A:フランシスコ会 B:ドミニコ会 C:イエズス会 D:シトー会",
+      "meta": {
+        "pair_id": "P028",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P028:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 宗教改革でカトリック改革（対抗宗教改革）を主導した修道会は? A:フランシスコ会 B:ドミニコ会 C:イエズス会 D:シトー会",
+      "meta": {
+        "pair_id": "P028",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P029:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 大航海時代に喜望峰航路を開いたポルトガルの航海者は? A:コロンブス B:ヴァスコ・ダ・ガマ C:マゼラン D:カボット",
+      "meta": {
+        "pair_id": "P029",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P029:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 大航海時代に喜望峰航路を開いたポルトガルの航海者は? A:コロンブス B:ヴァスコ・ダ・ガマ C:マゼラン D:カボット",
+      "meta": {
+        "pair_id": "P029",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P030:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: アメリカ独立戦争で独立側の主要同盟国となった国は? A:フランス B:ロシア C:プロイセン D:オスマン帝国",
+      "meta": {
+        "pair_id": "P030",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P030:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: アメリカ独立戦争で独立側の主要同盟国となった国は? A:フランス B:ロシア C:プロイセン D:オスマン帝国",
+      "meta": {
+        "pair_id": "P030",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P031:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ウィーン会議後の国際秩序を象徴する体制は? A:ウィーン体制 B:ベルサイユ体制 C:ヤルタ体制 D:冷戦体制",
+      "meta": {
+        "pair_id": "P031",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P031:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ウィーン会議後の国際秩序を象徴する体制は? A:ウィーン体制 B:ベルサイユ体制 C:ヤルタ体制 D:冷戦体制",
+      "meta": {
+        "pair_id": "P031",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P032:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 南北戦争後のアメリカで奴隷制を法的に禁止した改正は? A:合衆国憲法第10条 B:第13条修正 C:第15条修正 D:第19条修正",
+      "meta": {
+        "pair_id": "P032",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P032:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 南北戦争後のアメリカで奴隷制を法的に禁止した改正は? A:合衆国憲法第10条 B:第13条修正 C:第15条修正 D:第19条修正",
+      "meta": {
+        "pair_id": "P032",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P033:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ドイツ統一（1871年）を主導したプロイセン宰相は? A:ビスマルク B:メッテルニヒ C:カヴール D:パーマストン",
+      "meta": {
+        "pair_id": "P033",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P033:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ドイツ統一（1871年）を主導したプロイセン宰相は? A:ビスマルク B:メッテルニヒ C:カヴール D:パーマストン",
+      "meta": {
+        "pair_id": "P033",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P034:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 第一次世界大戦のきっかけとなった事件は? A:タンジール事件 B:サラエボ事件 C:アガディール事件 D:フランクフルト和約",
+      "meta": {
+        "pair_id": "P034",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P034:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 第一次世界大戦のきっかけとなった事件は? A:タンジール事件 B:サラエボ事件 C:アガディール事件 D:フランクフルト和約",
+      "meta": {
+        "pair_id": "P034",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P035:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ベルサイユ条約で厳しい賠償を課された国は? A:イタリア B:ドイツ C:オーストリア D:ロシア",
+      "meta": {
+        "pair_id": "P035",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P035:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ベルサイユ条約で厳しい賠償を課された国は? A:イタリア B:ドイツ C:オーストリア D:ロシア",
+      "meta": {
+        "pair_id": "P035",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P036:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 大恐慌後、米国で実施された経済再建政策は? A:ニューディール政策 B:マーシャル・プラン C:ミュンヘン政策 D:グラスノスチ",
+      "meta": {
+        "pair_id": "P036",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P036:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 大恐慌後、米国で実施された経済再建政策は? A:ニューディール政策 B:マーシャル・プラン C:ミュンヘン政策 D:グラスノスチ",
+      "meta": {
+        "pair_id": "P036",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P037:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 第二次世界大戦後、西欧復興を支援した米国計画は? A:モンロー主義 B:マーシャル・プラン C:トルーマン・ドクトリン D:NATO",
+      "meta": {
+        "pair_id": "P037",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P037:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 第二次世界大戦後、西欧復興を支援した米国計画は? A:モンロー主義 B:マーシャル・プラン C:トルーマン・ドクトリン D:NATO",
+      "meta": {
+        "pair_id": "P037",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P038:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 冷戦期に米ソ間の緊張が最も高まった核危機は? A:スエズ危機 B:キューバ危機 C:ベルリン封鎖 D:プラハの春",
+      "meta": {
+        "pair_id": "P038",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P038:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 冷戦期に米ソ間の緊張が最も高まった核危機は? A:スエズ危機 B:キューバ危機 C:ベルリン封鎖 D:プラハの春",
+      "meta": {
+        "pair_id": "P038",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P039:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: EUの前身となる欧州石炭鉄鋼共同体（ECSC）の中心構想に関わった人物は? A:モネ B:チャーチル C:ド・ゴール D:アデナウアー",
+      "meta": {
+        "pair_id": "P039",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P039:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: EUの前身となる欧州石炭鉄鋼共同体（ECSC）の中心構想に関わった人物は? A:モネ B:チャーチル C:ド・ゴール D:アデナウアー",
+      "meta": {
+        "pair_id": "P039",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P040:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: アパルトヘイト撤廃後に南アフリカ大統領となった人物は? A:ツツ B:マンデラ C:ムガベ D:カビラ",
+      "meta": {
+        "pair_id": "P040",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P040:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: アパルトヘイト撤廃後に南アフリカ大統領となった人物は? A:ツツ B:マンデラ C:ムガベ D:カビラ",
+      "meta": {
+        "pair_id": "P040",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P041:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 中国で1978年以降の改革開放を主導した人物は? A:毛沢東 B:周恩来 C:鄧小平 D:胡耀邦",
+      "meta": {
+        "pair_id": "P041",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P041:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 中国で1978年以降の改革開放を主導した人物は? A:毛沢東 B:周恩来 C:鄧小平 D:胡耀邦",
+      "meta": {
+        "pair_id": "P041",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P042:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 中東で1948年に建国が宣言された国家は? A:ヨルダン B:イスラエル C:レバノン D:シリア",
+      "meta": {
+        "pair_id": "P042",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P042:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 中東で1948年に建国が宣言された国家は? A:ヨルダン B:イスラエル C:レバノン D:シリア",
+      "meta": {
+        "pair_id": "P042",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P043:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 古代メソポタミアの代表的法典は? A:十二表法 B:ハンムラビ法典 C:マヌ法典 D:サリカ法典",
+      "meta": {
+        "pair_id": "P043",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P043:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 古代メソポタミアの代表的法典は? A:十二表法 B:ハンムラビ法典 C:マヌ法典 D:サリカ法典",
+      "meta": {
+        "pair_id": "P043",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P044:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ギリシャ・ポリスのうち、民主政で知られる都市国家は? A:スパルタ B:アテネ C:テーベ D:コリントス",
+      "meta": {
+        "pair_id": "P044",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P044:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ギリシャ・ポリスのうち、民主政で知られる都市国家は? A:スパルタ B:アテネ C:テーベ D:コリントス",
+      "meta": {
+        "pair_id": "P044",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P045:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ローマ帝国を東西に分割統治した皇帝は? A:アウグストゥス B:ディオクレティアヌス C:コンスタンティヌス D:テオドシウス",
+      "meta": {
+        "pair_id": "P045",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P045:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ローマ帝国を東西に分割統治した皇帝は? A:アウグストゥス B:ディオクレティアヌス C:コンスタンティヌス D:テオドシウス",
+      "meta": {
+        "pair_id": "P045",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P046:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: イスラム帝国で最初の正統カリフは? A:ウマル B:アブー・バクル C:アリー D:ウスマーン",
+      "meta": {
+        "pair_id": "P046",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P046:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: イスラム帝国で最初の正統カリフは? A:ウマル B:アブー・バクル C:アリー D:ウスマーン",
+      "meta": {
+        "pair_id": "P046",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P047:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: モンゴル帝国を建国した人物は? A:フビライ B:バトゥ C:チンギス・ハン D:オゴデイ",
+      "meta": {
+        "pair_id": "P047",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P047:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: モンゴル帝国を建国した人物は? A:フビライ B:バトゥ C:チンギス・ハン D:オゴデイ",
+      "meta": {
+        "pair_id": "P047",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P048:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 英仏百年戦争でフランス側士気を高めた人物は? A:エリザベス1世 B:ジャンヌ・ダルク C:カトリーヌ・ド・メディシス D:マリー・アントワネット",
+      "meta": {
+        "pair_id": "P048",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P048:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 英仏百年戦争でフランス側士気を高めた人物は? A:エリザベス1世 B:ジャンヌ・ダルク C:カトリーヌ・ド・メディシス D:マリー・アントワネット",
+      "meta": {
+        "pair_id": "P048",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P049:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: フランス革命期に『恐怖政治』を主導した人物は? A:ミラボー B:ダントン C:ロベスピエール D:ラファイエット",
+      "meta": {
+        "pair_id": "P049",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P049:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: フランス革命期に『恐怖政治』を主導した人物は? A:ミラボー B:ダントン C:ロベスピエール D:ラファイエット",
+      "meta": {
+        "pair_id": "P049",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P050:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ナポレオン戦争後、ウィーン会議を主導したオーストリア外相は? A:タレーラン B:メッテルニヒ C:ビスマルク D:カヴール",
+      "meta": {
+        "pair_id": "P050",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P050:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ナポレオン戦争後、ウィーン会議を主導したオーストリア外相は? A:タレーラン B:メッテルニヒ C:ビスマルク D:カヴール",
+      "meta": {
+        "pair_id": "P050",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "world_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P051:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 大化の改新（乙巳の変）の年は? A:538 B:645 C:710 D:794",
+      "meta": {
+        "pair_id": "P051",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P051:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 大化の改新（乙巳の変）の年は? A:538 B:645 C:710 D:794",
+      "meta": {
+        "pair_id": "P051",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P052:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 平城京遷都の年は? A:701 B:710 C:752 D:794",
+      "meta": {
+        "pair_id": "P052",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P052:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 平城京遷都の年は? A:701 B:710 C:752 D:794",
+      "meta": {
+        "pair_id": "P052",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P053:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 平安京遷都の年は? A:710 B:752 C:784 D:794",
+      "meta": {
+        "pair_id": "P053",
+        "lang": "ja",
+        "gold_canonical_answer": "D",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P053:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 平安京遷都の年は? A:710 B:752 C:784 D:794",
+      "meta": {
+        "pair_id": "P053",
+        "lang": "en",
+        "gold_canonical_answer": "D",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P054:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 鎌倉幕府成立（源頼朝征夷大将軍）の年は? A:1180 B:1185 C:1192 D:1221",
+      "meta": {
+        "pair_id": "P054",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P054:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 鎌倉幕府成立（源頼朝征夷大将軍）の年は? A:1180 B:1185 C:1192 D:1221",
+      "meta": {
+        "pair_id": "P054",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P055:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 元寇（文永の役）の年は? A:1274 B:1281 C:1333 D:1392",
+      "meta": {
+        "pair_id": "P055",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P055:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 元寇（文永の役）の年は? A:1274 B:1281 C:1333 D:1392",
+      "meta": {
+        "pair_id": "P055",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P056:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 鎌倉幕府滅亡の年は? A:1274 B:1333 C:1392 D:1467",
+      "meta": {
+        "pair_id": "P056",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P056:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 鎌倉幕府滅亡の年は? A:1274 B:1333 C:1392 D:1467",
+      "meta": {
+        "pair_id": "P056",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P057:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 応仁の乱が始まった年は? A:1392 B:1467 C:1492 D:1543",
+      "meta": {
+        "pair_id": "P057",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P057:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 応仁の乱が始まった年は? A:1392 B:1467 C:1492 D:1543",
+      "meta": {
+        "pair_id": "P057",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P058:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 鉄砲伝来の年は? A:1492 B:1543 C:1575 D:1600",
+      "meta": {
+        "pair_id": "P058",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P058:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 鉄砲伝来の年は? A:1492 B:1543 C:1575 D:1600",
+      "meta": {
+        "pair_id": "P058",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P059:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 関ヶ原の戦いの年は? A:1575 B:1582 C:1600 D:1603",
+      "meta": {
+        "pair_id": "P059",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P059:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 関ヶ原の戦いの年は? A:1575 B:1582 C:1600 D:1603",
+      "meta": {
+        "pair_id": "P059",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P060:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 江戸幕府が開かれた年は? A:1600 B:1603 C:1615 D:1635",
+      "meta": {
+        "pair_id": "P060",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P060:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 江戸幕府が開かれた年は? A:1600 B:1603 C:1615 D:1635",
+      "meta": {
+        "pair_id": "P060",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P061:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 鎖国体制を強化する武家諸法度改定の年は? A:1615 B:1635 C:1688 D:1703",
+      "meta": {
+        "pair_id": "P061",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P061:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 鎖国体制を強化する武家諸法度改定の年は? A:1615 B:1635 C:1688 D:1703",
+      "meta": {
+        "pair_id": "P061",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P062:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: ペリー来航の年は? A:1848 B:1853 C:1867 D:1868",
+      "meta": {
+        "pair_id": "P062",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P062:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: ペリー来航の年は? A:1848 B:1853 C:1867 D:1868",
+      "meta": {
+        "pair_id": "P062",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P063:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 明治維新の年は? A:1867 B:1868 C:1871 D:1889",
+      "meta": {
+        "pair_id": "P063",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P063:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 明治維新の年は? A:1867 B:1868 C:1871 D:1889",
+      "meta": {
+        "pair_id": "P063",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P064:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 大日本帝国憲法発布の年は? A:1871 B:1885 C:1889 D:1894",
+      "meta": {
+        "pair_id": "P064",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P064:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 大日本帝国憲法発布の年は? A:1871 B:1885 C:1889 D:1894",
+      "meta": {
+        "pair_id": "P064",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P065:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 日清戦争開戦の年は? A:1889 B:1894 C:1904 D:1914",
+      "meta": {
+        "pair_id": "P065",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P065:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 日清戦争開戦の年は? A:1889 B:1894 C:1904 D:1914",
+      "meta": {
+        "pair_id": "P065",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P066:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 日露戦争開戦の年は? A:1894 B:1904 C:1910 D:1914",
+      "meta": {
+        "pair_id": "P066",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P066:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 日露戦争開戦の年は? A:1894 B:1904 C:1910 D:1914",
+      "meta": {
+        "pair_id": "P066",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P067:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 韓国併合の年は? A:1905 B:1910 C:1914 D:1919",
+      "meta": {
+        "pair_id": "P067",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P067:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 韓国併合の年は? A:1905 B:1910 C:1914 D:1919",
+      "meta": {
+        "pair_id": "P067",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P068:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 第二次世界大戦終結（日本降伏）の年は? A:1944 B:1945 C:1946 D:1952",
+      "meta": {
+        "pair_id": "P068",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P068:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 第二次世界大戦終結（日本降伏）の年は? A:1944 B:1945 C:1946 D:1952",
+      "meta": {
+        "pair_id": "P068",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P069:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 東京オリンピック（前回大会）の年は? A:1956 B:1960 C:1964 D:1968",
+      "meta": {
+        "pair_id": "P069",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P069:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 東京オリンピック（前回大会）の年は? A:1956 B:1960 C:1964 D:1968",
+      "meta": {
+        "pair_id": "P069",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P070:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 東日本大震災の年は? A:1995 B:2008 C:2011 D:2020",
+      "meta": {
+        "pair_id": "P070",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P070:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 東日本大震災の年は? A:1995 B:2008 C:2011 D:2020",
+      "meta": {
+        "pair_id": "P070",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "year"
+      }
+    },
+    {
+      "item_id": "P071:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 奈良時代の都として代表的なのは? A:平安京 B:平城京 C:長岡京 D:難波宮",
+      "meta": {
+        "pair_id": "P071",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P071:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 奈良時代の都として代表的なのは? A:平安京 B:平城京 C:長岡京 D:難波宮",
+      "meta": {
+        "pair_id": "P071",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P072:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 平安時代の文化として適切なのは? A:国風文化 B:天平文化 C:化政文化 D:北山文化",
+      "meta": {
+        "pair_id": "P072",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P072:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 平安時代の文化として適切なのは? A:国風文化 B:天平文化 C:化政文化 D:北山文化",
+      "meta": {
+        "pair_id": "P072",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P073:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 鎌倉幕府で執権政治を主導した一族は? A:源氏 B:平氏 C:北条氏 D:足利氏",
+      "meta": {
+        "pair_id": "P073",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P073:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 鎌倉幕府で執権政治を主導した一族は? A:源氏 B:平氏 C:北条氏 D:足利氏",
+      "meta": {
+        "pair_id": "P073",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P074:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 室町幕府を開いた人物は? A:足利尊氏 B:足利義満 C:源頼朝 D:徳川家康",
+      "meta": {
+        "pair_id": "P074",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P074:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 室町幕府を開いた人物は? A:足利尊氏 B:足利義満 C:源頼朝 D:徳川家康",
+      "meta": {
+        "pair_id": "P074",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P075:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 戦国時代に天下統一へ最初に大きく前進した人物は? A:豊臣秀吉 B:徳川家康 C:織田信長 D:武田信玄",
+      "meta": {
+        "pair_id": "P075",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P075:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 戦国時代に天下統一へ最初に大きく前進した人物は? A:豊臣秀吉 B:徳川家康 C:織田信長 D:武田信玄",
+      "meta": {
+        "pair_id": "P075",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P076:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 江戸時代の参勤交代を制度化した政権は? A:鎌倉幕府 B:室町幕府 C:江戸幕府 D:明治政府",
+      "meta": {
+        "pair_id": "P076",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P076:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 江戸時代の参勤交代を制度化した政権は? A:鎌倉幕府 B:室町幕府 C:江戸幕府 D:明治政府",
+      "meta": {
+        "pair_id": "P076",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P077:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 江戸幕府3代将軍は? A:徳川家光 B:徳川家康 C:徳川家綱 D:徳川吉宗",
+      "meta": {
+        "pair_id": "P077",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P077:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 江戸幕府3代将軍は? A:徳川家光 B:徳川家康 C:徳川家綱 D:徳川吉宗",
+      "meta": {
+        "pair_id": "P077",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P078:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 享保の改革を行った将軍は? A:徳川家綱 B:徳川綱吉 C:徳川吉宗 D:徳川家斉",
+      "meta": {
+        "pair_id": "P078",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P078:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 享保の改革を行った将軍は? A:徳川家綱 B:徳川綱吉 C:徳川吉宗 D:徳川家斉",
+      "meta": {
+        "pair_id": "P078",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P079:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 田沼意次の後、寛政の改革を主導した人物は? A:松平定信 B:水野忠邦 C:井伊直弼 D:大久保利通",
+      "meta": {
+        "pair_id": "P079",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P079:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 田沼意次の後、寛政の改革を主導した人物は? A:松平定信 B:水野忠邦 C:井伊直弼 D:大久保利通",
+      "meta": {
+        "pair_id": "P079",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P080:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 天保の改革を主導した人物は? A:松平定信 B:田沼意次 C:水野忠邦 D:伊藤博文",
+      "meta": {
+        "pair_id": "P080",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P080:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 天保の改革を主導した人物は? A:松平定信 B:田沼意次 C:水野忠邦 D:伊藤博文",
+      "meta": {
+        "pair_id": "P080",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P081:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 明治政府の地租改正の主目的として最も適切なのは? A:兵農分離 B:安定財源確保 C:士族優遇 D:鎖国維持",
+      "meta": {
+        "pair_id": "P081",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P081:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 明治政府の地租改正の主目的として最も適切なのは? A:兵農分離 B:安定財源確保 C:士族優遇 D:鎖国維持",
+      "meta": {
+        "pair_id": "P081",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P082:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 廃藩置県が目指したものは? A:地方分権の拡大 B:中央集権国家の形成 C:幕藩体制維持 D:外国保護国化",
+      "meta": {
+        "pair_id": "P082",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P082:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 廃藩置県が目指したものは? A:地方分権の拡大 B:中央集権国家の形成 C:幕藩体制維持 D:外国保護国化",
+      "meta": {
+        "pair_id": "P082",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P083:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 富国強兵政策の一環として整備された制度は? A:徴兵令 B:鎖国令 C:刀狩令 D:楽市楽座",
+      "meta": {
+        "pair_id": "P083",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P083:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 富国強兵政策の一環として整備された制度は? A:徴兵令 B:鎖国令 C:刀狩令 D:楽市楽座",
+      "meta": {
+        "pair_id": "P083",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P084:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 自由民権運動で国会開設を求めた中心勢力は? A:藩閥政府 B:士族反乱 C:民間有志 D:外国公使団",
+      "meta": {
+        "pair_id": "P084",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P084:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 自由民権運動で国会開設を求めた中心勢力は? A:藩閥政府 B:士族反乱 C:民間有志 D:外国公使団",
+      "meta": {
+        "pair_id": "P084",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P085:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 日清戦争後に獲得した領土として適切なのは? A:朝鮮半島全域 B:台湾 C:樺太全域 D:香港",
+      "meta": {
+        "pair_id": "P085",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P085:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 日清戦争後に獲得した領土として適切なのは? A:朝鮮半島全域 B:台湾 C:樺太全域 D:香港",
+      "meta": {
+        "pair_id": "P085",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P086:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 日露戦争講和条約の名称は? A:下関条約 B:ポーツマス条約 C:サンフランシスコ条約 D:講和勅令",
+      "meta": {
+        "pair_id": "P086",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P086:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 日露戦争講和条約の名称は? A:下関条約 B:ポーツマス条約 C:サンフランシスコ条約 D:講和勅令",
+      "meta": {
+        "pair_id": "P086",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P087:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 大正デモクラシー期に普通選挙法が成立した年は? A:1911 B:1918 C:1925 D:1931",
+      "meta": {
+        "pair_id": "P087",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P087:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 大正デモクラシー期に普通選挙法が成立した年は? A:1911 B:1918 C:1925 D:1931",
+      "meta": {
+        "pair_id": "P087",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P088:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 戦後日本国憲法の基本原理に含まれないものは? A:国民主権 B:基本的人権の尊重 C:平和主義 D:王権神授",
+      "meta": {
+        "pair_id": "P088",
+        "lang": "ja",
+        "gold_canonical_answer": "D",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P088:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 戦後日本国憲法の基本原理に含まれないものは? A:国民主権 B:基本的人権の尊重 C:平和主義 D:王権神授",
+      "meta": {
+        "pair_id": "P088",
+        "lang": "en",
+        "gold_canonical_answer": "D",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P089:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 高度経済成長期の象徴的インフラとして適切なのは? A:東海道新幹線 B:山陽新幹線 C:青函トンネル D:瀬戸大橋",
+      "meta": {
+        "pair_id": "P089",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P089:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 高度経済成長期の象徴的インフラとして適切なのは? A:東海道新幹線 B:山陽新幹線 C:青函トンネル D:瀬戸大橋",
+      "meta": {
+        "pair_id": "P089",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P090:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 1970年に開催された国際博覧会の開催地は? A:東京 B:名古屋 C:大阪 D:福岡",
+      "meta": {
+        "pair_id": "P090",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P090:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 1970年に開催された国際博覧会の開催地は? A:東京 B:名古屋 C:大阪 D:福岡",
+      "meta": {
+        "pair_id": "P090",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P091:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 1990年代初頭の日本経済で使われる表現として適切なのは? A:オイルショック B:バブル崩壊 C:列強化 D:金本位復帰",
+      "meta": {
+        "pair_id": "P091",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P091:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 1990年代初頭の日本経済で使われる表現として適切なのは? A:オイルショック B:バブル崩壊 C:列強化 D:金本位復帰",
+      "meta": {
+        "pair_id": "P091",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P092:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 明治時代に近代教育制度の整備で重要な法令は? A:教育勅語 B:学制 C:大宝律令 D:御成敗式目",
+      "meta": {
+        "pair_id": "P092",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P092:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 明治時代に近代教育制度の整備で重要な法令は? A:教育勅語 B:学制 C:大宝律令 D:御成敗式目",
+      "meta": {
+        "pair_id": "P092",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P093:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 奈良の大仏建立を進めた天皇は? A:桓武天皇 B:聖武天皇 C:後醍醐天皇 D:後白河天皇",
+      "meta": {
+        "pair_id": "P093",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P093:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 奈良の大仏建立を進めた天皇は? A:桓武天皇 B:聖武天皇 C:後醍醐天皇 D:後白河天皇",
+      "meta": {
+        "pair_id": "P093",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P094:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 平清盛が権勢を振るった時代区分は? A:平安時代末期 B:鎌倉時代初期 C:室町時代 D:江戸時代",
+      "meta": {
+        "pair_id": "P094",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P094:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 平清盛が権勢を振るった時代区分は? A:平安時代末期 B:鎌倉時代初期 C:室町時代 D:江戸時代",
+      "meta": {
+        "pair_id": "P094",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P095:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 鎌倉新仏教の宗派に含まれるのは? A:浄土宗 B:天台宗 C:真言宗 D:法相宗",
+      "meta": {
+        "pair_id": "P095",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P095:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 鎌倉新仏教の宗派に含まれるのは? A:浄土宗 B:天台宗 C:真言宗 D:法相宗",
+      "meta": {
+        "pair_id": "P095",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P096:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 戦国大名の分国法が果たした役割として適切なのは? A:全国統一法 B:領国内統治秩序の整備 C:公家法の代替 D:幕府外交法",
+      "meta": {
+        "pair_id": "P096",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P096:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 戦国大名の分国法が果たした役割として適切なのは? A:全国統一法 B:領国内統治秩序の整備 C:公家法の代替 D:幕府外交法",
+      "meta": {
+        "pair_id": "P096",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P097:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 江戸時代の対外窓口として主にオランダ貿易が行われた場所は? A:堺 B:長崎出島 C:函館 D:横浜",
+      "meta": {
+        "pair_id": "P097",
+        "lang": "ja",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P097:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 江戸時代の対外窓口として主にオランダ貿易が行われた場所は? A:堺 B:長崎出島 C:函館 D:横浜",
+      "meta": {
+        "pair_id": "P097",
+        "lang": "en",
+        "gold_canonical_answer": "B",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P098:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 幕末に大政奉還を行った将軍は? A:徳川家慶 B:徳川家茂 C:徳川慶喜 D:徳川家定",
+      "meta": {
+        "pair_id": "P098",
+        "lang": "ja",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P098:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 幕末に大政奉還を行った将軍は? A:徳川家慶 B:徳川家茂 C:徳川慶喜 D:徳川家定",
+      "meta": {
+        "pair_id": "P098",
+        "lang": "en",
+        "gold_canonical_answer": "C",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P099:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 第一次世界大戦後、日本が参加した国際協調の枠組みは? A:国際連盟 B:NATO C:ワルシャワ条約機構 D:ASEAN",
+      "meta": {
+        "pair_id": "P099",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P099:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 第一次世界大戦後、日本が参加した国際協調の枠組みは? A:国際連盟 B:NATO C:ワルシャワ条約機構 D:ASEAN",
+      "meta": {
+        "pair_id": "P099",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P100:ja",
+      "prompt": "JSONのみで回答。キーは pair_id, lang, canonical_answer, explanation_ja。問題: 戦後復興期に制定された朝鮮特需などで拡大した産業分野として適切なのは? A:重化学工業 B:農業のみ C:手工業のみ D:林業のみ",
+      "meta": {
+        "pair_id": "P100",
+        "lang": "ja",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    },
+    {
+      "item_id": "P100:en",
+      "prompt": "Return JSON only with keys pair_id, lang, canonical_answer, explanation_en. Question: 戦後復興期に制定された朝鮮特需などで拡大した産業分野として適切なのは? A:重化学工業 B:農業のみ C:手工業のみ D:林業のみ",
+      "meta": {
+        "pair_id": "P100",
+        "lang": "en",
+        "gold_canonical_answer": "A",
+        "domain": "japan_history",
+        "subtype": "fact"
+      }
+    }
+  ]
+}

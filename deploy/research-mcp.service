@@ -1,0 +1,31 @@
+# Install (system scope, requires sudo):
+#   1. Edit User=, WorkingDirectory=, ExecStart= to match your setup.
+#   2. sudo cp deploy/research-mcp.service /etc/systemd/system/research-mcp.service
+#   3. sudo systemctl daemon-reload
+#   4. sudo systemctl enable --now research-mcp.service
+
+[Unit]
+Description=Research MCP Server
+After=network.target
+
+[Service]
+Type=simple
+# Replace YOUR_USER with the OS user that owns the install directory.
+User=YOUR_USER
+# Replace YOUR_INSTALL_DIR with the absolute path to the cloned repository root.
+WorkingDirectory=YOUR_INSTALL_DIR/mcp-server
+ExecStart=/usr/bin/env node YOUR_INSTALL_DIR/mcp-server/dist/index.js
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+Environment=NODE_ENV=production
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+Environment=MCP_TRANSPORT=http
+Environment=MCP_PORT=8080
+# Set to 127.0.0.1 to restrict to localhost, or 0.0.0.0 to allow remote access (e.g. via VPN).
+Environment=MCP_BIND_HOST=0.0.0.0
+
+[Install]
+WantedBy=multi-user.target

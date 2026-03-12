@@ -1,0 +1,48 @@
+# nodes.yaml - Compute Node 接続情報
+#
+# MCP Server がSSH経由で固定コマンドを実行するための設定。
+# 秘密情報（鍵パス、トークン）は置かない。
+# SSH鍵は ssh-agent または ~/.ssh/config で管理する。
+#
+# Setup:
+#   1. Copy this file and fill in your own node details.
+#   2. Each node requires: host, user, port, workdir, compute_runner.
+#   3. `workdir`    : working directory on the compute node for run artifacts.
+#   4. `compute_runner`: absolute path to the `compute-runner` executable on the node.
+#   5. `datasets_dir`, `models_dir`: optional; passed to compute-runner as --datasets-dir / --models-dir.
+#   6. `backend`   : "rocm" or "cuda" (informational label only).
+#   7. `aliases`   : optional short names (used as node_id in run_compute MCP tool).
+
+nodes:
+  # ── Example: ROCm node ──────────────────────────────────────────────────────
+  # Uncomment and edit to add your own compute nodes.
+  #
+  # example-rocm-node:
+  #   host: 192.168.1.10           # IP address or hostname (Tailscale FQDN etc.)
+  #   user: YOUR_USER              # SSH login user on the compute node
+  #   port: 22
+  #   workdir: /home/YOUR_USER/compute-work
+  #   python: /home/YOUR_USER/.venv-compute/bin/python
+  #   compute_runner: /home/YOUR_USER/.venv-compute/bin/compute-runner
+  #   backend: rocm
+  #   aliases: my-rocm
+  #   datasets_dir: /home/YOUR_USER/datasets
+  #   models_dir: /home/YOUR_USER/models
+  #   description: "AMD Radeon RX 9070 XT (ROCm)"
+
+  # ── Example: CUDA node ──────────────────────────────────────────────────────
+  # example-cuda-node:
+  #   host: 192.168.1.20
+  #   user: YOUR_USER
+  #   port: 22
+  #   workdir: /home/YOUR_USER/compute-work
+  #   python: /home/YOUR_USER/.venv-compute/bin/python
+  #   compute_runner: /home/YOUR_USER/.venv-compute/bin/compute-runner
+  #   backend: cuda
+  #   aliases: my-cuda
+  #   datasets_dir: /home/YOUR_USER/datasets
+  #   models_dir: /home/YOUR_USER/models
+  #   description: "NVIDIA RTX 4090 (CUDA)"
+
+# 接続テスト:
+#   ssh -p 22 YOUR_USER@YOUR_HOST "echo ok"

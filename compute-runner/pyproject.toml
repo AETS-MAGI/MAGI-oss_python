@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rocm-compute-runner"
+version = "0.1.0"
+description = "Compute-node inference runner for ROCm-MCP"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+inference = ["llama-cpp-python"]
+
+[project.scripts]
+compute-runner = "rocm_compute.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

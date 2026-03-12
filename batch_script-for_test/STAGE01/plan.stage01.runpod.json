@@ -1,0 +1,50 @@
+{
+  "schema_version": "py-batch-plan-v1",
+  "plan_id": "py_stage01_eve_zorya_temp_sweep_20260306",
+  "tasks_file": "<INSTALL_DIR>_rust/tasks/pairs_ja_en_100.json",
+  "nodes": [
+    {
+      "node_id": "runpod-mi300x",
+      "ssh": "root@YOUR_RUNPOD_IP -p YOUR_SSH_PORT -i ~/.ssh/YOUR_KEY"
+    }
+  ],
+  "epochs": 30,
+  "replicates": 1,
+  "model_tags": {
+    "t0p0": "deepseek-r1-distill-qwen-7b-q4_k_m-t0p0:latest",
+    "t0p1": "deepseek-r1-distill-qwen-7b-q4_k_m-t0p1:latest",
+    "t0p2": "deepseek-r1-distill-qwen-7b-q4_k_m-t0p2:latest",
+    "t0p7": "deepseek-r1-distill-qwen-7b-q4_k_m-t0p7:latest"
+  },
+  "temps": [
+    {
+      "label": "t0p0",
+      "temperature": 0.0
+    },
+    {
+      "label": "t0p1",
+      "temperature": 0.1
+    },
+    {
+      "label": "t0p2",
+      "temperature": 0.2
+    },
+    {
+      "label": "t0p7",
+      "temperature": 0.7
+    }
+  ],
+  "gen_params": {
+    "top_k": 40,
+    "top_p": 0.95,
+    "max_new_tokens": 256,
+    "seed": 42
+  },
+  "artifact_root": "<TANK_DIR>/artifacts_py",
+  "timeout_sec_per_task": 120,
+  "preflight_timeout_sec": 60,
+  "preflight_retries": 2,
+  "sleep_between_retries": 5,
+  "preflight_prompt": "Respond with OK only.",
+  "parallel_tasks_per_node": 1
+}

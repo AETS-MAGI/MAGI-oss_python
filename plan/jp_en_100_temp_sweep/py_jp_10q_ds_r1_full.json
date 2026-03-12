@@ -1,0 +1,35 @@
+{
+    "schema_version": "py-batch-plan-v1",
+    "plan_id": "py_jp_10q_ds_r1_full_runpod",
+    "tasks_file": "<TANK_DIR>/datasets/japanese_10q_short.json",
+    "nodes": [
+        {
+            "node_id": "runpod-mi300x-full",
+            "ssh": "root@YOUR_RUNPOD_IP -p 12151 -i ~/.ssh/YOUR_KEY -o ServerAliveInterval=30 -o ServerAliveCountMax=3"
+        }
+    ],
+    "epochs": 2,
+    "replicates": 1,
+    "model_tags": {
+        "t0p0": "deepseek-r1:671b"
+    },
+    "temps": [
+        {
+            "label": "t0p0",
+            "temperature": 0.0
+        }
+    ],
+    "gen_params": {
+        "top_k": 40,
+        "top_p": 0.95,
+        "max_new_tokens": 2048,
+        "seed": 42
+    },
+    "artifact_root": "<TANK_DIR>/artifacts_python-MI300X",
+    "timeout_sec_per_task": 90,
+    "preflight_timeout_sec": 600,
+    "preflight_retries": 3,
+    "sleep_between_retries": 10,
+    "preflight_prompt": "Respond with OK only.",
+    "parallel_tasks_per_node": 1
+}
